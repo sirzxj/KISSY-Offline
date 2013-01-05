@@ -9,9 +9,9 @@ KISSY.add(function(S) {
 	 */
 
 	var DomBase;
-	typeof window.localStorages !== 'undefined' ? S.use('offline/localstorage', function(S, Dom) {
+	typeof window.localStorage !== 'undefined' ? S.use('offline/localstorage', function(S, Dom) {
 		DomBase = Dom;
-	}) : S.UA.ie < 9 ? S.use('offline/ie-offline', function(S, Dom) {
+	}) : S.UA.ie < 8 ? S.use('offline/ie-offline', function(S, Dom) {
 		DomBase = Dom;
 	}) : S.error('Your browser does not support');
 
