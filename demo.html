@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link rel="stylesheet" href="offiline/bootstrap.min.css">
+	<link rel="stylesheet" href="offline/bootstrap.min.css">
 	<style type="text/css">
 		table{
 			border:solid 1px #eee;
@@ -41,7 +41,7 @@
 	<script type="text/javascript">
 		KISSY.config({
             packages: [{
-                name: "offiline",
+                name: "offline",
                 path: "./",
                 charset: "utf-8"
             }]
@@ -81,7 +81,7 @@
 	
 	<script type="text/javascript">
 		//alert(document.addBehavior);
-		KISSY.use('offiline/index,template',function (S,Offiline,Template) {
+		KISSY.use('offline/index',function (S,Offiline) {
 			var a = new Offiline();
 			var $ = S.all;
 			var TEMPLATE = '<tr class="J_List">'+
@@ -142,41 +142,6 @@
 			$('#J_Used').on('click',function(){
 				alert(a.usedByte());
 			});
-
-			$('#J_2').on('click',function(){
-				//a.clear()//('a','b');
-				alert(a.getAll());
-			});
-
-
-			$('#J_3').on('click',function(){
-				//a.clear()//('a','b');
-				alert(a.size());
-			});
-			$('#J_4').on('click',function(){
-				//a.clear()//('a','b');
-				a.clear();
-			});
-			$('#J_5').on('click',function(){
-				//a.clear()//('a','b');
-				a.removeItem($('#J_a').val());
-			});
-			$('#J_6').on('click',function(){
-				//a.clear()//('a','b');
-				alert(a.getItem($('#J_a').val()));
-			});
-			$('#J_7').on('click',function(){
-				//a.clear()//('a','b');
-				alert(a.timeRemain('a'));
-			});
-			//alert(window.JSON)
-			/*4
-			
-			a.setItem('aa','b');
-			//alert(a.getItem('a'));
-			a.removeItem('a');
-			//alert(a.getItem('a'));
-			*/
 		});
 	</script>
 </body>
