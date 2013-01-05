@@ -3,11 +3,6 @@
  * @author 伯方<bofang.zxj@taobao.com>
  **/
 KISSY.add(function(S) {
-	/**
-	 * [Offline description]
-	 * @param {[type]} config [description]
-	 */
-
 	var DomBase;
 	typeof window.localStorage !== 'undefined' ? S.use('offline/localstorage', function(S, Dom) {
 		DomBase = Dom;
@@ -78,7 +73,7 @@ KISSY.add(function(S) {
 		},
 		/**
 		 * 清空本地存储的字段
-		 * @return {Boolean}    成功则返回true，失败返回false
+		 * @return {Boolean}  成功则返回true，失败返回false
 		 */
 		clear: function() {
 			S.Offline.fire('clear');
@@ -112,8 +107,8 @@ KISSY.add(function(S) {
 			return DomBase.timeRemain(key);
 		},
 		/**
-		 * 获取单个字段的剩余保存时间
-		 * @return {[type]} [description]
+		 * 浏览器中总共使用的字节数
+		 * @return {Number} 字节数
 		 */
 		usedByte: function() {
 			return DomBase.usedByte();
